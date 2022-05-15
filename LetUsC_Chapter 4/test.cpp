@@ -1,8 +1,7 @@
 # include <stdio.h>
 int main( )
 {
-char spy = 'a', password = 'z' ;
-if ( spy == 'a' or password == 'z' )
-printf ( "All the birds are safe in the nest\n" ) ;
+int n = 9 ;
+( n == 9 ? printf ( "Correct\n" )  : printf ( "Wrong\n" )  ) ;
 return 0 ;
 }
