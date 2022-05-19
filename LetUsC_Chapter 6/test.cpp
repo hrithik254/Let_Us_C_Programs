@@ -1,19 +1,14 @@
 #include<stdio.h>
 #include<stdlib.h>
-
 int main()
+{	
+int year=0,inv,alt;
+while(alt>inv)
 {
-	int i = 1, j = 1 ;
-	for ( ; ; )
-	{
-		if ( i > 5 )
-			break ;
-	else
-		j += i ;
-	printf ( "%d\n", j ) ;
-	i += j ; 
-	
-	}
-	return 0 ;
+year++;
+alt=120*year;
+inv=(1000*year)-4000;
+}
+printf("The minimum year is %d",year);
 }
 
