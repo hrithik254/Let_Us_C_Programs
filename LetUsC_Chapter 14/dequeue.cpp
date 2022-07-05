@@ -58,7 +58,7 @@ void in_r(char*arr,char x,char *right)
 	{
 		*(right) = x;
 		right = right+1;
-		printf("\n%c is inserted at %u",x,right);
+		printf("\n%c is inserted at address %u",x,right);
 	}
 }
 

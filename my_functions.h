@@ -15,6 +15,21 @@ void int_array_generator(int *array, int SIZE, int step)
 	}
 }
 
+void int_array_generator_sudoku(int *array, int SIZE, int step)
+/*
+	params 
+		size = size of the desired array
+		step = step between integers of array 
+	return 
+		pointer to array
+*/
+{
+	for(int i = 0;i<SIZE;i++)
+	{
+		array[i] = i*step +1;
+	}
+}
+
 
 void print_array(int *array,int row, int column)
 /*
