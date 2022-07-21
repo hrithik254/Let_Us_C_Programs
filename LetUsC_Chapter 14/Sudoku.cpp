@@ -3,6 +3,8 @@
 #include"../my_functions.h"
 
 int col_chekr(int *first_el);
+int row_chekr(int *first_el);
+
 int main()
 {
 	int sudoku[9][9]= {
@@ -17,7 +19,7 @@ int main()
 							{3,4,5,2,8,6,1,7,9}
 						};
 	
-	col_chekr(*sudoku);
+	row_chekr(*sudoku);
 }
 
 int col_chekr(int *first_el)
@@ -33,6 +35,7 @@ int col_chekr(int *first_el)
 			printf("\n%d  %d  ",array[*(first_el+k*9)-1],*(first_el+k*9)); // for debugging
 			if(array[*(first_el+k*9)-1] == -1)
 			{
+				printf("%d",array[*(first_el+k*9)-1]);
 				return 0;
 			}
 			else
@@ -45,19 +48,33 @@ int col_chekr(int *first_el)
 	}
 }
 
-int row_checker(int *first_el, int rows)
+int row_chekr(int *first_el)
 {
-	printf("Checking for rows")
-	for(register int i =0;i<rows;i++)
+	printf("Checking for rows");
+	for(register int i =0;i<9;i++)
 	{
-		int array[9];
-		int_array_generator_sudoku(array,9,1);
+		int arr[9];
+		int_array_generator_sudoku(arr,9,1);
 		printf("\nRow %d\n",i+1);
-		for(register int k=0;k<rows;k++)
+		for(register int k=0;k<9;k++)
 		{
-			if()
+			printf("%d %d\n",arr[*(first_el) -1 ],*(first_el));
+			if(arr[*(first_el)-1] == -1)
+			{
+				return 0;
+			}
+			else
+			{
+				if(arr[*(first_el) -1 ] == *(first_el) )
+					{
+						arr[*(first_el) -1 ] = -1;
+					}
+			}
+			first_el++;
 		}
 	}
 }
+
+
 
 
